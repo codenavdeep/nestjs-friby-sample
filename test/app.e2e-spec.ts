@@ -68,8 +68,8 @@ describe('Items', function () {
     });
 
     it('Get Items', function () {
-        return frisby.post('http://localhost:3000/items')
-            .expect('status', 201)
+        return frisby.get('http://localhost:3000/items')
+            .expect('status', 200)
             .then(function (res) {
                 const responseBody = res._body
                 console.log(JSON.stringify(responseBody))
